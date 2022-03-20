@@ -116,6 +116,9 @@ class Language
         $this->languages = [];
         $dir = $this->dir;
         $parser = new Parser();
+        if (!is_dir($dir)) {
+            return;
+        }
         foreach (new \DirectoryIterator($dir) as $file) {
             if ($file->isDot()) {
                 continue;
