@@ -1,0 +1,27 @@
+{
+  "name": "sunxyw/zm-module-essential",
+  "description": "Zhamao Framework Composer Demo Module Repository",
+  "minimum-stability": "stable",
+  "license": "Apache-2.0",
+  "require": {
+    "zhamao/framework": "^2.4"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest",
+    "swoole/ide-helper": "@dev"
+  },
+  "scripts": {
+    "post-create-project-cmd": "vendor/bin/start init",
+    "post-update-cmd": "vendor/bin/start check:config"
+  },
+  "autoload": {
+    "psr-4": {
+      "Bot\\Module\\Essential\\": "."
+    }
+  },
+  "extra": {
+    "zm": {
+      "module-path": "."
+    }
+  }
+}
